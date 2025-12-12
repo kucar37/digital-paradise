@@ -1,0 +1,287 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; 
+    background-color: #050505; 
+    color: white;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+}
+
+/* --- NAVIGATION --- */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    position: absolute; 
+    width: 100%;
+    z-index: 1000;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.8), transparent);
+}
+
+.logo {
+    font-weight: 800;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+}
+
+.nav-links a {
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    opacity: 0.7;
+    font-weight: 600;
+}
+
+.nav-links a:hover {
+    opacity: 1;
+    color: #00ffcc;
+}
+
+.social-icons {
+    display: flex;
+    gap: 20px;
+    font-size: 1.2rem;
+}
+
+.social-icons a:hover {
+    color: #00ffcc;
+    transform: translateY(-2px);
+}
+
+/* --- HERO SECTION --- */
+.hero {
+    height: 100vh; 
+    width: 100%;
+    /* Swap URL below for real image later */
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.8)), url('https://via.placeholder.com/1920x1080/111/333?text=Hero+Image+Placeholder'); 
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.main-title {
+    font-size: 5rem;
+    text-transform: uppercase;
+    font-weight: 900;
+    margin-bottom: 10px;
+    letter-spacing: -2px;
+    line-height: 1;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    letter-spacing: 4px;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    color: #ddd;
+    font-weight: 300;
+}
+
+/* --- BUTTONS --- */
+.cta-button {
+    padding: 15px 35px;
+    background-color: white;
+    color: black;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: 2px solid white;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+}
+
+.cta-button.secondary {
+    background-color: transparent;
+    color: white;
+}
+
+.cta-button:hover {
+    background-color: #00ffcc; 
+    border-color: #00ffcc;
+    color: black;
+}
+
+/* --- SECTIONS --- */
+.content-section {
+    padding: 100px 20px;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 3rem;
+    margin-bottom: 60px;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+/* --- MUSIC GRID --- */
+.music-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; 
+    gap: 40px;
+}
+
+.music-item {
+    width: 300px;
+    text-align: center;
+}
+
+.placeholder-box {
+    width: 100%;
+    height: 300px;
+    background-color: #1a1a1a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #333; 
+    margin-bottom: 20px;
+    color: #555;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.track-title {
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+}
+
+.stream-link {
+    color: #888;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.stream-link:hover {
+    color: #00ffcc;
+}
+
+/* --- TOUR DATES --- */
+.tour-table {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: #111; 
+    padding: 30px;
+}
+
+.tour-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    border-bottom: 1px solid #222;
+    text-align: left;
+    transition: 0.2s;
+}
+
+.tour-row:hover {
+    background-color: #161616;
+    padding-left: 10px; 
+}
+
+.tour-row:last-child {
+    border-bottom: none;
+}
+
+.date { font-weight: bold; width: 15%; color: #00ffcc; font-size: 1.1rem; }
+.venue { width: 35%; color: white; font-weight: bold; }
+.city { width: 25%; text-transform: uppercase; color: #888; font-size: 0.9rem; }
+
+.sold-out {
+    background-color: #ffd700; 
+    color: black;
+    padding: 5px 10px;
+    font-weight: 900;
+    transform: rotate(-3deg); 
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    display: inline-block;
+}
+
+.ticket-btn {
+    border: 1px solid #444;
+    padding: 8px 25px;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    color: #aaa;
+}
+
+.ticket-btn:hover {
+    border-color: white;
+    color: white;
+    background: transparent;
+}
+
+/* --- FOOTER --- */
+footer {
+    padding: 80px 20px;
+    text-align: center;
+    background-color: black;
+    border-top: 1px solid #111;
+}
+
+.email-display {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    color: white;
+    font-weight: bold;
+}
+
+.footer-socials {
+    margin: 40px 0;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.footer-socials a {
+    color: #666;
+    font-size: 1.5rem;
+}
+
+.footer-socials a:hover {
+    color: white;
+}
+
+.epk-download {
+    margin-bottom: 40px;
+}
+
+.copyright {
+    font-size: 0.7rem;
+    opacity: 0.3;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 768px) {
+    .main-title { font-size: 3rem; }
+    .navbar { padding: 20px; }
+    .nav-links { display: none; }
+    .tour-row { flex-direction: column; gap: 10px; text-align: center; align-items: center; }
+    .tour-row:hover { padding-left: 0; }
+    .date, .venue, .city { width: 100%; }
+}
