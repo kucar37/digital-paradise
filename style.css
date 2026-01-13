@@ -1,6 +1,6 @@
 /* --- VARIABLES --- */
 :root {
-  --bg-black: #222222;
+  --bg-black: #111111;
   --accent-gold: #ffb907;
   --neon-pink: #ff00c8;
   --white: #ffffff;
@@ -122,7 +122,7 @@ a {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-blend-mode: multiply; /* Key for high contrast */
+  background-blend-mode: multiply;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -388,6 +388,135 @@ footer {
   opacity: 0.3;
   text-transform: uppercase;
   letter-spacing: 1px;
+}
+
+/* --- SPLIT LAYOUT (Bio Left / Booking Right) --- */
+.split-wrapper {
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 80px 20px;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+.split-side {
+  flex: 1;
+}
+
+/* --- LEFT SIDE: BIO STYLING --- */
+.text-left {
+  text-align: left;
+  margin-bottom: 30px;
+}
+
+.bio-content {
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(10px);
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.bio-content p {
+  margin-bottom: 15px;
+  line-height: 1.6;
+  color: #ccc;
+  font-size: 0.95rem;
+}
+
+.bio-intro {
+  font-size: 1.2rem !important;
+  font-weight: 800;
+  color: var(--white) !important;
+}
+
+.bio-tags {
+  margin-top: 20px;
+  display: flex;
+  gap: 10px;
+}
+
+.tag {
+  border: 1px solid var(--accent-gold);
+  color: var(--accent-gold);
+  padding: 5px 12px;
+  border-radius: 50px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+/* --- RIGHT SIDE: BOOKING STYLING --- */
+.booking-box {
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(10px);
+  padding: 40px;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  margin-top: 140px;
+  position: sticky;
+  top: 100px;
+}
+
+.booking-box h2 {
+  font-size: 2rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+
+.booking-sub {
+  color: #888;
+  margin-bottom: 30px;
+}
+
+.booking-details ul {
+  list-style: none;
+  margin: 10px;
+  color: #ddd;
+  font-weight: 700;
+}
+
+.booking-details li {
+  margin-bottom: 8px;
+  border-bottom: 1px solid #333;
+  padding-bottom: 5px;
+  display: inline-block;
+  width: 100%;
+}
+
+.big-btn {
+  width: 100%;
+  display: block;
+  font-size: 1.2rem;
+  padding: 15px;
+  margin-bottom: 15px;
+}
+
+.email-link {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* --- FOOTER TWEAKS --- */
+.epk-download {
+  margin-bottom: 30px;
+}
+
+/* --- MOBILE RESPONSIVE --- */
+@media (max-width: 900px) {
+  .split-wrapper {
+    flex-direction: column;
+  }
+
+  .split-side {
+    width: 100%;
+  }
+
+  .text-left {
+    text-align: center;
+  }
 }
 
 /* --- RESPONSIVE --- */
